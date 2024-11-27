@@ -1,0 +1,230 @@
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+  padding: 20px;
+  margin-left: 40px;
+}
+
+.category-box {
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+
+.category-box:hover {
+  opacity: 0.8;
+}
+
+.total-score {
+  margin-top: 10px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+/* Estilos para el modal */
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 10;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1050;
+  border-bottom: 25px;
+
+}
+
+.modal-content {
+  background-color: #b5e49a;
+  width: 80%;
+  max-width: 800px;
+  padding: 40px;
+  border-radius: 10px;
+  max-height: 80vh;
+  overflow-y: auto;
+  margin: 25px;
+  
+  
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.question-container {
+  margin-bottom: 20px;
+}
+
+.radio-group1 {
+  width: 700px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  
+}
+.radio-group {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.radio-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+
+.radio-label input {
+  margin-bottom: 2px;
+  transform: scale(0.8);
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:last-child {
+  background-color: #f44336;
+}
+
+button:last-child:hover {
+  background-color: #d32f2f;
+}
+/* Añade esto al final de tu archivo ProjectPage.css */
+
+.thank-you-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.thank-you-message h2 {
+  font-size: 24px;
+  color: #4CAF50;
+}
+
+* BoxPage.css */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .project-box {
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s;
+    margin-left: 50px;
+  }
+  
+  .project-box:hover {
+    background-color: #2980b9;
+  }
+
+  /* Grid.css */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 30px;
+}
+
+.grid-box {
+  background-color: #4CAF50;
+  color: rgb(8, 8, 8);
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 20px;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0px;
+  margin-left: 50px;
+}
+
+.grid-box:hover {
+  background-color: #45a049;
+}
+
+.box-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.nombre {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.ficha {
+  font-size: 18px;
+  font-weight: bold;
+  
+}
+
+.ficha1 {
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+.grid-box:nth-child(7) {
+  grid-column: 2;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-box:nth-child(7) {
+    grid-column: auto;
+  }
+}
