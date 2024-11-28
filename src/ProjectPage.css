@@ -143,7 +143,7 @@ button:last-child:hover {
   color: #4CAF50;
 }
 
-* BoxPage.css */
+/* BoxPage.css */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

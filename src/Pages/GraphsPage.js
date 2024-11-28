@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Bar, Pie } from 'react-chartjs-2';
 import '../BoxPage.css';
+import '../GraphsPage.css';
 import { 
   Chart as ChartJS, 
   CategoryScale, 
@@ -12,7 +12,7 @@ import {
   ArcElement 
 } from 'chart.js';
 import { FaMedal } from 'react-icons/fa';
-import '../GraphsPage.css';
+
 
 ChartJS.register(
   CategoryScale,

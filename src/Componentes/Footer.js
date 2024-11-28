@@ -1,7 +1,6 @@
 import React from 'react';
 import '../Footer.css'; // Asegúrate de tener este archivo CSS
 import logo from '../LogoAI.png';
-import logo2 from '../sennova.png';
 
 function Footer() {
   return (
