@@ -1,6 +1,5 @@
-import React from 'react';
-import Logo3 from '../invest.png'
-
+import React from "react";
+import Logo3 from "../invest.png";
 
 const Home = () => {
   return (
@@ -10,24 +9,27 @@ const Home = () => {
         {/* Contenedor de texto */}
         <div className="md:w-1/2 max-w-4xl text-justify text-[#080808] font-bold mb-8 md:mb-0">
           <p className="text-xl text-[#39a800] mb-8 text-center">
-            La plataforma definitiva para impulsar y visibilizar la investigación!
+            La plataforma definitiva para impulsar y visibilizar la
+            investigación!
           </p>
           <p>
-            Project-App es mucho más que una herramienta de gestión: es un espacio diseñado para transformar cómo se crean, presentan y evalúan los proyectos en el ámbito investigativo. <br />
-            Centraliza y optimiza el seguimiento de cada etapa, facilitando el acceso a evaluaciones detalladas y visualizaciones impactantes que dan vida a cada iniciativa. Además, con nuestro módulo de difusión, los eventos y hallazgos pueden llegar a la audiencia correcta, impulsando el intercambio de conocimiento y la colaboración entre profesionales y estudiantes. <br />
-            
-          </p>
+            Project-App es mucho más que una herramienta de gestión: es un
+            espacio diseñado para transformar cómo se crean, presentan y evalúan
+            los proyectos en el ámbito investigativo y formativo.
+            <br/>
+            <br/>
           
+            Centraliza y optimiza el seguimiento de cada etapa, facilitando el
+            acceso a evaluaciones detalladas y visualizaciones impactantes que
+            dan vida a cada iniciativa. Además, con nuestro módulo de difusión,
+            los eventos y hallazgos pueden llegar a la audiencia correcta,
+            impulsando el intercambio de conocimiento y la colaboración entre
+            profesionales y estudiantes. 
+          </p>
         </div>
 
-        {/* Contenedor de la imagen */}  
-        <img
-            src={Logo3}
-            alt="Imagen decorativa"
-            className=" w-full max-w-xs"
-          />
-        
-         
+        {/* Contenedor de la imagen */}
+        <img src={Logo3} alt="Imagen decorativa" className=" w-full max-w-xs" />
       </section>
 
       {/* Services Section 

@@ -137,7 +137,6 @@ function ProjectPage() {
         "¿La metodología empleada es adecuada y bien explicada para lograr los objetivos del proyecto?",
         "¿¿El proyecto tiene un propósito significativo y puede generar un impacto positivo en su área de aplicación?",
         "¿Los resultados del proyecto están bien fundamentados y son consistentes con los objetivos planteados?",
-        "¿Los objetivos estan bien planteados?",
         "¿La presentación sigue una estructura lógica  y facilita la comprensión?",
         "¿El expositor demuestra conocimiento del tema y lo explica con claridad?",
         "¿La presentación visual (diapositivas, prototipos, gráficos) es atractiva y complementa la explicación del proyecto?",

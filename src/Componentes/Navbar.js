@@ -3,6 +3,7 @@ import '../Navbar.css';
 import logo from '../Logosim.png'
 import logo2 from '../sennova.png'
 
+
 function Navbar({ toggleSidebar }) {
   return (
     <header className="navbar">

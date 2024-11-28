@@ -18,6 +18,10 @@
     margin-inline-end: 80px;
 }
 
+.footer .logo1 {
+    height: 35px;
+}
+
 .footer h1 {
     margin: 0;
     flex-grow: 1;
