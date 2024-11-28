@@ -176,7 +176,7 @@ function ProjectPage() {
       },
     }));
   };
-
+/*
   const submitEvaluation2 = () => {
     const evaluationData = {
       nombre,
@@ -195,7 +195,7 @@ function ProjectPage() {
     setScores({});
     setEvaluator("");
   };
-
+*/
   if (!project) {
     return <div>Proyecto no encontrado</div>;
   }

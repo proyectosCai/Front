@@ -149,7 +149,7 @@ function GraphsPage() {
 
     return sortedProjects;
   };
-
+/*
   const barChartData = {
     labels: data?.categories || [],
     datasets: [
@@ -184,7 +184,7 @@ function GraphsPage() {
       },
     ],
   };
-
+*/
   console.log ("data: ", topProjects)
 
   return (
