@@ -49,7 +49,8 @@ function Sidebar({ isOpen, toggleSidebar }) {
           <li><NavLink to="/rate-project" onClick={toggleSidebar}>Calificar Proyecto</NavLink></li>
           <li><NavLink to="/graphs" onClick={toggleSidebar}>Resultados</NavLink></li>
           <li><NavLink to="/project-results-table" onClick={toggleSidebar}>Resultados Proyectos</NavLink></li>
-     
+          <li><NavLink to="/" onClick={toggleSidebar}>Inicio</NavLink></li>
+          
         </ul>
          )}
       </nav>
