@@ -10,13 +10,16 @@ function ProjectPage() {
   const { boxNumber, projectId } = useParams();
   let nombre = '';
 
-  if (boxNumber === '9112') {
-    nombre = 'CENTRO PARA LA FORMACIÓN CAFETERA';
-  } else if (boxNumber === '9219') {
-    nombre = 'CENTRO DE AUTOMATIZACIÓN INDUSTRIAL';
-  } else if (boxNumber === '9515') {
-    nombre = 'CENTRO PECUARIO Y AGROEMPRESARIAL';
-  } else {
+  if (boxNumber === '2901432 ') {
+    nombre = ' IMPLEMENTACION DE INFRAESTRUCTURA DE TECNOLOGIAS DE LA INFORMACION Y LAS COMUNICACIONES';
+  } else if (boxNumber === '2931657 ') {
+    nombre = 'MODELADO DIGITAL DE PRODUCTOS INDUSTRIALES';
+  } else if (boxNumber === '2673191 ') {
+    nombre = 'DISEÑO E INTEGRACIÓN DE AUTOMATISMOS MECATRÓNICOS';
+  } else if (boxNumber === '2697737  ') {
+    nombre = 'DISEÑO E INTEGRACIÓN DE AUTOMATISMOS MECATRÓNICOS';
+  } 
+  else {
     nombre = 'Otra Página';
   }
   const navigate = useNavigate();
