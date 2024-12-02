@@ -31,45 +31,62 @@ function ProjectPage() {
   const [showThankYou, setShowThankYou] = useState(false);
   const apiUrl = process.env.REACT_APP_API_URL;
 
-  const submitEvaluation = async () => {
-    const evaluationData = {
-      Nombre: "Evento Sennova 2024",
-      Proyecto: projectId,
-      Centro: boxNumber,
-      Evaluador: evaluator,
-      Total: parseInt(totalScores["EVALUAR"]),
-     
-    };
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-    console.log("data: ", evaluationData);
+const submitEvaluation = async () => {
+  // Validaciones previas
+  if (isSubmitting) return; // Previene múltiples clics
+  
+  if (!evaluator) {
+    alert("Por favor, seleccione un evaluador");
+    return;
+  }
 
-    try {
-      const response = await fetch(`${apiUrl}/sennova`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(evaluationData),
-      });
+  const allQuestionsScored = currentCategory.questions.every(question => 
+    scores[currentCategory.name]?.[question]
+  );
 
-      if (response.ok) {
-        setShowThankYou(true);
-        setTimeout(() => {
-          setShowThankYou(false);
-          closeModal();
-          navigate("/rate-project");
-        }, 2000);
-        console.log("Enviado");
-      } else {
-        console.error("Error al enviar la evaluación");
-        // Aquí puedes manejar el error, por ejemplo, mostrando un mensaje al usuario
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      // Aquí puedes manejar el error de red, por ejemplo, mostrando un mensaje al usuario
-    }
+  if (!allQuestionsScored) {
+    alert("Por favor, califique todas las preguntas");
+    return;
+  }
+
+  setIsSubmitting(true); // Bloquea envíos adicionales
+
+  const evaluationData = {
+    Nombre: "Evento Sennova 2024",
+    Proyecto: projectId,
+    Centro: boxNumber,
+    Evaluador: evaluator,
+    Total: parseInt(totalScores["EVALUAR"]),
   };
 
+  try {
+    const response = await fetch(`${apiUrl}/sennova`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(evaluationData),
+    });
+
+    if (response.ok) {
+      setShowThankYou(true);
+      setTimeout(() => {
+        setShowThankYou(false);
+        closeModal();
+        navigate("/rate-project");
+      }, 2000);
+    } else {
+      alert("Error al enviar la evaluación");
+      setIsSubmitting(false); // Desbloquea si hay error
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    alert("No se pudo enviar la evaluación. Verifique su conexión.");
+    setIsSubmitting(false); // Desbloquea si hay error
+  }
+};
   // Este objeto debería ser el mismo que en BoxPage.js
   const projectsByFicha = {
     9112: [
@@ -238,19 +255,30 @@ function ProjectPage() {
       >
         {" "}
         {showThankYou ? (
-          <div className="thank-you-message">
+          <div className="thank-you-message fullscreen-thank-you">
             <h2>¡Gracias por su evaluación!</h2>
           </div>
         ) : (
           <>
             <h2>Seleccione una única opción por pregunta</h2>
-            <input
-              className="radio-group1"
-              type="text"
-              value={evaluator}
-              onChange={(e) => setEvaluator(e.target.value)}
-              placeholder="Nombre evaluador"
-            />
+            <select value={evaluator} onChange={(e) => setEvaluator(e.target.value)}>
+            <option value="">Evaluador</option>
+  <option value="Andrea Cotrini Valencia">Andrea Cotrini Valencia</option>
+  <option value="Andrés Espitia Cardona">Andrés Espitia Cardona</option>
+  <option value="Andrés Felipe Aguirre García">Andrés Felipe Aguirre García</option>
+  <option value="Carlos Alejandro Ramírez Gómez">Carlos Alejandro Ramírez Gómez</option>
+  <option value="Carlos Duber Villa González">Carlos Duber Villa González</option>
+  <option value="Christian Zetty Arenas">Christian Zetty Arenas</option>
+  <option value="Diana Carolina Galvez Coy">Diana Carolina Galvez Coy</option>
+  <option value="Diana Carolina Vargas Giraldo">Diana Carolina Vargas Giraldo</option>
+  <option value="Guillermo Hernán Zapata Castellanos">Guillermo Hernán Zapata Castellanos</option>
+  <option value="Jorge Víctor Buriticá Calderón">Jorge Víctor Buriticá Calderón</option>
+  <option value="José David López Álzate">José David López Álzate</option>
+  <option value="Leidy Johanna Forero Rincón">Leidy Johanna Forero Rincón</option>
+  <option value="Luis Edier Gañan Gañan">Luis Edier Gañan Gañan</option>
+  <option value="Valentina Hernández Piedrahita">Valentina Hernández Piedrahita</option>
+</select>
+
 
             {currentCategory?.questions.map((question) => (
               <div key={question} className="question-container">
@@ -277,7 +305,12 @@ function ProjectPage() {
               </div>
             ))}
             <div className="button-group">
-              <button onClick={submitEvaluation}>Enviar Evaluación</button>
+            <button 
+  onClick={submitEvaluation} 
+  disabled={isSubmitting}
+>
+  {isSubmitting ? 'Enviando...' : 'Enviar Evaluación'}
+</button>
               <button onClick={closeModal}>Cerrar</button>
             </div>
           </>

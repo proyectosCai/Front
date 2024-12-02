@@ -228,3 +228,30 @@ button:last-child:hover {
     grid-column: auto;
   }
 }
+
+.fullscreen-thank-you {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #39a800; /* Puedes ajustar el color de fondo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background-image: url('Logosim.png'); 
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.fullscreen-thank-you h2 {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  background-color: rgba(0,0,0,0.5); /* Fondo semi-transparente para mejorar legibilidad */
+  padding: 20px;
+  border-radius: 10px;
+}
