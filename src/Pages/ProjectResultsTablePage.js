@@ -85,6 +85,8 @@ function ProjectResultsTablePage() {
         <table className="results-table">
           <thead>
             <tr>
+
+            <th>Ficha</th>
            
               <th>Proyecto</th>
                         
@@ -94,6 +96,8 @@ function ProjectResultsTablePage() {
           <tbody>
             {projectResults.map((project, index) => (
               <tr key={index}>
+
+              <td>{project.Ficha}</td>
                
                 <td>{project.Proyecto}</td>
                

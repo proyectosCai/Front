@@ -135,13 +135,18 @@ function ProjectPage() {
       questions: [
         "¿El proyecto tiene objetivos claros y bien definidos que guían el desarrollo?",
         "¿La metodología empleada es adecuada y bien explicada para lograr los objetivos del proyecto?",
-        "¿¿El proyecto tiene un propósito significativo y puede generar un impacto positivo en su área de aplicación?",
         "¿Los resultados del proyecto están bien fundamentados y son consistentes con los objetivos planteados?",
-        "¿La presentación sigue una estructura lógica  y facilita la comprensión?",
-        "¿El expositor demuestra conocimiento del tema y lo explica con claridad?",
+        "¿El proyecto tiene un propósito significativo y puede generar un impacto positivo en su área de aplicación?",
+        "¿El proyecto incluye soluciones técnicamente viables, utilizando herramientas, conceptos o tecnologías adecuadas a su propósito?",
+        "¿El proyecto demuestra creatividad en su diseño, metodología o solución propuesta? ",
+        "¿El proyecto presenta  impactos positivos en el ámbito social, económico y/o ambiental?",
+        "¿La presentación sigue una estructura lógica y facilita la comprensión?",
+
+        "¿Los expositores demuestran conocimiento del tema y lo explican con claridad?",
         "¿La presentación visual (diapositivas, prototipos, gráficos) es atractiva y complementa la explicación del proyecto?",
-        "¿El expositor utiliza recursos (contacto visual, lenguaje corporal, tono) que involucran al público?",
-        "¿El expositor se expresa con claridad, utiliza un tono adecuado y muestra seguridad al presentar?"
+
+        "¿Los expositores utilizan recursos (contacto visual, lenguaje corporal, tono) que involucran al público?",
+        "¿Los expositores se expresa con claridad, utilizan un tono adecuado y muestran seguridad al presentar?"
       ],
     },
   ];
@@ -194,16 +199,17 @@ function ProjectPage() {
     setScores({});
     setEvaluator("");
   };
-*/
+
   if (!project) {
     return <div>Proyecto no encontrado</div>;
-  }
+  }*/
 
   return (
     <div className="  min-h-screen  ppl-64 md:pl-0">
       <div className="grid-box">
         <div className="box-content">
           <span className="ficha">{projectId}</span>
+          <span className="ficha">{'Ficha: '}{boxNumber}</span>
         </div>
       </div>
 

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import '../Sidebar.css'
 
 const events = [
-  { id: 1, title: "Evento Cientifico SENNOVA 2024", path: "/event/" }
+  { id: 1, title: "Presentación Proyectos Formativos CAI - 2024", path: "/event/" }
 
 ];
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import poster from '../SennovaEvent.jpg'
+import poster from '../poster.png'
 import { Link } from 'react-router-dom';
 
 function Event() {

@@ -1,47 +1,105 @@
 // BoxPage.js
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import '../BoxPage.css';
-
+import React from "react";
+import { useParams, Link } from "react-router-dom";
+import "../BoxPage.css";
 
 function BoxPage() {
   const { boxNumber } = useParams();
-  let nombre = '';
+  let nombre = "";
 
-  if (boxNumber === '9112') {
-    nombre = 'CENTRO PARA LA FORMACIÓN CAFETERA';
-  } else if (boxNumber === '9219') {
-    nombre = 'CENTRO DE AUTOMATIZACIÓN INDUSTRIAL';
-  } else if (boxNumber === '9515') {
-    nombre = 'CENTRO PECUARIO Y AGROEMPRESARIAL';
+  if (boxNumber === "2673191") {
+    nombre = "DISEÑO E INTEGRACIÓN DE AUTOMATISMOS MECATRÓNICOS";
+  } else if (boxNumber === "2697737") {
+    nombre = "DISEÑO E INTEGRACIÓN DE AUTOMATISMOS MECATRÓNICOS";
+  } else if (boxNumber === "2931657") {
+    nombre = "MODELADO DIGITAL DE PRODUCTOS INDUSTRIALES";
+  } else if (boxNumber === "2901432") {
+    nombre = "IMPLEMENTACION DE INFRAESTRUCTURA DE TECNOLOGIAS DE LA INFORMACION Y LAS COMUNICACIONES";
   } else {
-    nombre = 'Otra Página';
+    nombre = "Otra Página";
   }
 
   // Objeto que mapea cada número de ficha a sus proyectos
   const projectsByFicha = {
-    '9112': [
-      { id: 1, name: "Desarrollo de un prototipo de harina alimenticia a partir de productos y subproductos agrícolas como aporte a la seguridad alimentaria de la región de caldas" },
-      { id: 2, name: "Efecto de la harina de cascara de plátano verde (Musa paradisiaca) en la rentabilidad y asimilación de la dieta de gallinas ponedoras" },
-      { id: 3, name: "Obtención de principios activos de plantas medicinales " },
-     
+    2901432: [
+      { id: 1, name: "Acceso instantáneo, Identidad garantizada" },
+      {
+        id: 2,
+        name: "ParqueaTech",
+      },
+      {
+        id: 3,
+        name: "SmartLight: Movilidad Eficiente",
+      },
+   
+      {
+        id: 4,
+        name: "Semáforos inteligentes.",
+      },
+      {
+        id: 5,
+        name: "Manizales 360 Postes de seguridad.",
+      },
+      {
+        id: 6,
+        name: "Paradero inteligente.",
+      },
+      {
+        id: 7,
+        name: "IITIC RENOVANDO VIDAS.",
+      },
+      
     ],
-    '9219': [
-      { id: 1, name: "Producción de Aceite de Palma con enfoque de sostenibilidad ambiental y resiliencia al cambio climático." },
-     
-    ],
-    '9515': [
-      { id: 1, name: "Diagnóstico del sistema turístico de La Dorada, Caldas para su desarrollo integrado con los espacios rurales" },
-      { id: 2, name: "Análisis integral del sistema turístico de la Dorada, Caldas: oportunidades y desafíos" },
-      { id: 3, name: "Estudios de Capacidad de Carga Turística en rutas para el Aviturismo del Magdalena Caldense" },
-      { id: 4, name: "Percepción de los habitantes de la vereda  el Japón frente al cambio climático " },
-      { id: 5, name: "Tecnología y naturaleza: realidad aumentada para la educación ambiental y la conservación de fauna silvestre en La Dorada, Caldas" },
-      { id: 6, name: "Ganadería sostenible: elaboración de biofertilizantes para el mejoramiento de pasturas en la Dorada, Caldas." },
-      { id: 7, name: "Desarrollo de emprendimiento socio-ambiental de base circular, mediado por e-learning" },
-      { id: 8, name: "Desarrollo de un aplicativo integral para la optimización de reservas hoteleras e información turistica en el magdalena medio." },
 
+    2931657: [
+      {
+        id: 1,
+        name: "Llevo- llevo Carretillas de carga municipio de Chinchiná",
+      },
     ],
-    
+
+    2673191: [
+      {
+        id: 1,
+        name: "Automatización de mezcladora industrial.",
+      },
+      {
+        id: 2,
+        name: "Automatización de gallinero.",
+      },
+      {
+        id: 3,
+        name: "Automatizar selección de productos conformes o no conformes en máquinas de rayos x.",
+      },
+      {
+        id: 4,
+        name: "Desarrollo de prototipo didáctico de generación de energía eólica por túnel de viento.",
+      },
+      {
+        id: 5,
+        name: "Diseño, ensamble y programación de un sistema de taladrado de piezas automático.",
+      },
+    ],
+    2697737: 
+    [
+      {
+        id: 1,
+        name: "Dosificador de alimentos automático para aves y especies menores.",
+      },
+      {
+        id: 2,
+        name: "Unidad integrada de control y maniobra para invernadero.",
+      },
+      {
+        id: 3,
+        name: "Diseño y construcción de procesadora de alimentos cárnicos.",
+      },
+      {
+        id: 4,
+        name: "Diseño e implementación de un sistema de lavado Automático de vehículos con tecnología PLC.",
+      },
+      
+    ],
   };
 
   // Obtiene los proyectos para la ficha actual
@@ -52,12 +110,13 @@ function BoxPage() {
       <div className="grid-box">
         <div className="box-content">
           <span className="ficha">{nombre}</span>
+          <span className="ficha">{'Ficha: '}{boxNumber}</span>
         </div>
       </div>
 
       {projects.length > 0 ? (
         <div className="project-grid">
-          {projects.map(project => (
+          {projects.map((project) => (
             <Link
               key={project.id}
               to={`/box/${boxNumber}/project/${project.name}`}
