@@ -30,7 +30,7 @@ function Sidebar({ isOpen, toggleSidebar }) {
             {isEventsOpen && (
               <ul className="dropdown-menu">
                 {events.map(event => (
-                  <li key={event.id}>
+                  <li className='uno' key={event.id}>
                     <NavLink 
                       to={event.path} 
                       onClick={toggleSidebar}
