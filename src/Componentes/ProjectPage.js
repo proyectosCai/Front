@@ -35,7 +35,7 @@ function ProjectPage() {
     const evaluationData = {
       Nombre: "Evento Sennova 2024",
       Proyecto: projectId,
-      Centro: nombre,
+      Centro: boxNumber,
       Evaluador: evaluator,
       Total: parseInt(totalScores["EVALUAR"]),
      

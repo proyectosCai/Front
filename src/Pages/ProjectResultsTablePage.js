@@ -30,7 +30,7 @@ function ProjectResultsTablePage() {
       const projectKey = `${project.Ficha}-${project.Proyecto}`;
       if (!projectTotals[projectKey]) {
         projectTotals[projectKey] = {
-          Ficha: project.Ficha,
+          Ficha: project.Centro,
           Proyecto: project.Proyecto,
           Total: { sum: 0, count: 0 }
         };
