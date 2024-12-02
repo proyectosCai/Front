@@ -4,12 +4,11 @@
   color: white;
   width: 250px;
   height: calc(100vh - 60px);
-  position: fixed;
+  position: sticky; /* Cambia de fixed a sticky */
   left: 0;
   top: 60px;
   transition: transform 0.3s ease-in-out;
 }
-
 .sidebar ul {
   list-style-type: none;
   padding: 0;
