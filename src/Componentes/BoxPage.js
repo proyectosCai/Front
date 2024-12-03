@@ -79,6 +79,10 @@ function BoxPage() {
         id: 5,
         name: "Diseño, ensamble y programación de un sistema de taladrado de piezas automático.",
       },
+      {
+        id: 6,
+        name: "Automatización del sistema de llenado de tanques",
+      },
     ],
     2697737: 
     [

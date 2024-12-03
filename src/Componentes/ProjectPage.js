@@ -89,59 +89,89 @@ const submitEvaluation = async () => {
 };
   // Este objeto debería ser el mismo que en BoxPage.js
   const projectsByFicha = {
-    9112: [
-      {
-        id: 1,
-        name: "Desarrollo de un prototipo de harina alimenticia a partir de productos y subproductos agrícolas como aporte a la seguridad alimentaria de la región de caldas",
-      },
+    2901432: [
+      { id: 1, name: "Acceso instantáneo, Identidad garantizada" },
       {
         id: 2,
-        name: "Efecto de la harina de cascara de plátano verde (Musa paradisiaca) en la rentabilidad y asimilación de la dieta de gallinas ponedoras",
+        name: "ParqueaTech",
       },
       {
         id: 3,
-        name: "Obtención de principios activos de plantas medicinales ",
+        name: "SmartLight: Movilidad Eficiente",
       },
-    ],
-    9219: [
-      {
-        id: 1,
-        name: "Producción de Aceite de Palma con enfoque de sostenibilidad ambiental y resiliencia al cambio climático.",
-      },
-    ],
-    9515: [
-      {
-        id: 1,
-        name: "Diagnóstico del sistema turístico de La Dorada, Caldas para su desarrollo integrado con los espacios rurales",
-      },
-      {
-        id: 2,
-        name: "Análisis integral del sistema turístico de la Dorada, Caldas: oportunidades y desafíos",
-      },
-      {
-        id: 3,
-        name: "Estudios de Capacidad de Carga Turística en rutas para el Aviturismo del Magdalena Caldense",
-      },
+   
       {
         id: 4,
-        name: "Percepción de los habitantes de la vereda  el Japón frente al cambio climático ",
+        name: "Semáforos inteligentes.",
       },
       {
         id: 5,
-        name: "Tecnología y naturaleza: realidad aumentada para la educación ambiental y la conservación de fauna silvestre en La Dorada, Caldas",
+        name: "Manizales 360 Postes de seguridad.",
       },
       {
         id: 6,
-        name: "Ganadería sostenible: elaboración de biofertilizantes para el mejoramiento de pasturas en la Dorada, Caldas.",
+        name: "Paradero inteligente.",
       },
       {
         id: 7,
-        name: "Desarrollo de emprendimiento socio-ambiental de base circular, mediado por e-learning",
+        name: "IITIC RENOVANDO VIDAS.",
+      },
+      
+    ],
+
+    2931657: [
+      {
+        id: 1,
+        name: "Llevo- llevo Carretillas de carga municipio de Chinchiná",
+      },
+    ],
+
+    2673191: [
+      {
+        id: 1,
+        name: "Automatización de mezcladora industrial.",
       },
       {
-        id: 8,
-        name: "Desarrollo de un aplicativo integral para la optimización de reservas hoteleras e información turistica en el magdalena medio.",
+        id: 2,
+        name: "Automatización de gallinero.",
       },
+      {
+        id: 3,
+        name: "Automatizar selección de productos conformes o no conformes en máquinas de rayos x.",
+      },
+      {
+        id: 4,
+        name: "Desarrollo de prototipo didáctico de generación de energía eólica por túnel de viento.",
+      },
+      {
+        id: 5,
+        name: "Diseño, ensamble y programación de un sistema de taladrado de piezas automático.",
+      },
+      
+      {
+        id: 6,
+        name: "Automatización del sistema de llenado de tanques",
+      },
+    ],
+    2697737: 
+    [
+      {
+        id: 1,
+        name: "Dosificador de alimentos automático para aves y especies menores.",
+      },
+      {
+        id: 2,
+        name: "Unidad integrada de control y maniobra para invernadero.",
+      },
+      {
+        id: 3,
+        name: "Diseño y construcción de procesadora de alimentos cárnicos.",
+      },
+      {
+        id: 4,
+        name: "Diseño e implementación de un sistema de lavado Automático de vehículos con tecnología PLC.",
+      },
+      
     ],
   };
 
