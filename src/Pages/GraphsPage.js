@@ -204,7 +204,7 @@ function GraphsPage() {
             <h3 style={{textTransform: "uppercase",textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",fontSize:'20px', fontWeight: 'bold', color:'#202020', fontStyle:'italic'}}>{project.project}</h3>
             <br/><p style={{fontWeight: 'bold', fontSize:'16px'}}><strong>Puntaje Total:</strong> {project.score.toFixed(2)}</p>
             <br/>
-            <p style={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",fontWeight: 'bold', fontSize:'16px', color:'#292923'}}>{'Ficha: '}{project.centro}</p>
+            <p style={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",fontWeight: 'bold', fontSize:'16px', color:'#292923'}}>{'Proyecto N° '}{project.centro}</p>
           </div>
         ))}
       </div>

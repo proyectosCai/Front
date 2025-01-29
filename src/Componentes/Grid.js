@@ -4,10 +4,11 @@ import '../Grid.css';
 
 function Grid() {
   const boxes = [
-    { nombre: 'IMPLEMENTACION DE INFRAESTRUCTURA DE TECNOLOGIAS DE LA INFORMACION Y LAS COMUNICACIONES', Ficha: '2901432'},
-    { nombre: 'MODELADO DIGITAL DE PRODUCTOS INDUSTRIALES', Ficha: '2931657'},
-    { nombre: 'DISEÑO E INTEGRACIÓN DE AUTOMATISMOS MECATRÓNICOS', Ficha: '2673191'},
-    { nombre: 'DISEÑO E INTEGRACIÓN DE AUTOMATISMOS MECATRÓNICOS', Ficha: '2697737'},
+    { nombre: 'Desarrollo de prototipos de sistemas embebidos para pequeños y microproductores, integrados con fuentes de generación energética renovable.', Ficha: '1'},
+    { nombre: 'Control de calidad en procesos industriales adecuando visión artificial en la modernización del ambiente de formación FMS', Ficha: '2'},
+    { nombre: 'Tecnificación de una microempresa en uso de tecnologías 4.0 para la vigilancia y control del proceso', Ficha: '3'},
+    { nombre: 'Creación de maquina de impresión 3D de 5 ejes diseño SENA', Ficha: '4'},
+    { nombre: 'Desarrollo de aplicaciones a la medida que faciliten la unificación de herramientas tecnológicas de apoyo a procesos administrativos en diferentes sectores productivos', Ficha: '5'},
     
   ]
 

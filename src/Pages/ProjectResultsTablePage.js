@@ -86,7 +86,7 @@ function ProjectResultsTablePage() {
           <thead>
             <tr>
 
-            <th>Ficha</th>
+            <th>N°</th>
            
               <th>Proyecto</th>
                         

@@ -8,19 +8,24 @@ Modal.setAppElement("#root");
 
 function ProjectPage() {
   const { boxNumber, projectId } = useParams();
-  let nombre = '';
+  let nombre = "";
 
-  if (boxNumber === '2901432 ') {
-    nombre = ' IMPLEMENTACION DE INFRAESTRUCTURA DE TECNOLOGIAS DE LA INFORMACION Y LAS COMUNICACIONES';
-  } else if (boxNumber === '2931657 ') {
-    nombre = 'MODELADO DIGITAL DE PRODUCTOS INDUSTRIALES';
-  } else if (boxNumber === '2673191 ') {
-    nombre = 'DISEÑO E INTEGRACIÓN DE AUTOMATISMOS MECATRÓNICOS';
-  } else if (boxNumber === '2697737  ') {
-    nombre = 'DISEÑO E INTEGRACIÓN DE AUTOMATISMOS MECATRÓNICOS';
-  } 
-  else {
-    nombre = 'Otra Página';
+  if (boxNumber === "1") {
+    nombre =
+      "Desarrollo de prototipos de sistemas embebidos para pequeños y microproductores, integrados con fuentes de generación energética renovable.";
+  } else if (boxNumber === "2") {
+    nombre =
+      "Control de calidad en procesos industriales adecuando visión artificial en la modernización del ambiente de formación FMS";
+  } else if (boxNumber === "3") {
+    nombre =
+      "Tecnificación de una microempresa en uso de tecnologías 4.0 para la vigilancia y control del proceso";
+  } else if (boxNumber === "4") {
+    nombre = " Creación de maquina de impresión 3D de 5 ejes diseño SENA";
+  } else if (boxNumber === "5") {
+    nombre =
+      " Desarrollo de aplicaciones a la medida que faciliten la unificación de herramientas tecnológicas de apoyo a procesos administrativos en diferentes sectores productivos";
+  } else {
+    nombre = "Otra Página";
   }
   const navigate = useNavigate();
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -33,145 +38,91 @@ function ProjectPage() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-const submitEvaluation = async () => {
-  // Validaciones previas
-  if (isSubmitting) return; // Previene múltiples clics
-  
-  if (!evaluator) {
-    alert("Por favor, seleccione un evaluador");
-    return;
-  }
+  const submitEvaluation = async () => {
+    // Validaciones previas
+    if (isSubmitting) return; // Previene múltiples clics
 
-  const allQuestionsScored = currentCategory.questions.every(question => 
-    scores[currentCategory.name]?.[question]
-  );
+    if (!evaluator) {
+      alert("Por favor, seleccione un evaluador");
+      return;
+    }
 
-  if (!allQuestionsScored) {
-    alert("Por favor, califique todas las preguntas");
-    return;
-  }
+    const allQuestionsScored = currentCategory.questions.every(
+      (question) => scores[currentCategory.name]?.[question]
+    );
 
-  setIsSubmitting(true); // Bloquea envíos adicionales
+    if (!allQuestionsScored) {
+      alert("Por favor, califique todas las preguntas");
+      return;
+    }
 
-  const evaluationData = {
-    Nombre: "Evento Sennova 2024",
-    Proyecto: projectId,
-    Centro: boxNumber,
-    Evaluador: evaluator,
-    Total: parseInt(totalScores["EVALUAR"]),
-  };
+    setIsSubmitting(true); // Bloquea envíos adicionales
 
-  try {
-    const response = await fetch(`${apiUrl}/sennova`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(evaluationData),
-    });
+    const evaluationData = {
+      Nombre: "Convocatoria SENNOVA - 2025",
+      Proyecto: projectId,
+      Centro: boxNumber,
+      Evaluador: evaluator,
+      Total: parseInt(totalScores["EVALUAR"]),
+    };
 
-    if (response.ok) {
-      setShowThankYou(true);
-      setTimeout(() => {
-        setShowThankYou(false);
-        closeModal();
-        navigate("/rate-project");
-      }, 2000);
-    } else {
-      alert("Error al enviar la evaluación");
+    try {
+      const response = await fetch(`${apiUrl}/sennova`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(evaluationData),
+      });
+
+      if (response.ok) {
+        setShowThankYou(true);
+        setTimeout(() => {
+          setShowThankYou(false);
+          closeModal();
+          navigate("/rate-project");
+        }, 2000);
+      } else {
+        alert("Error al enviar la evaluación");
+        setIsSubmitting(false); // Desbloquea si hay error
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("No se pudo enviar la evaluación. Verifique su conexión.");
       setIsSubmitting(false); // Desbloquea si hay error
     }
-  } catch (error) {
-    console.error("Error:", error);
-    alert("No se pudo enviar la evaluación. Verifique su conexión.");
-    setIsSubmitting(false); // Desbloquea si hay error
-  }
-};
+  };
   // Este objeto debería ser el mismo que en BoxPage.js
   const projectsByFicha = {
-    2901432: [
-      { id: 1, name: "Acceso instantáneo, Identidad garantizada" },
+    1: [
+      {
+        id: 1,
+        name: "Desarrollo de prototipos de sistemas embebidos para pequeños y microproductores, integrados con fuentes de generación energética renovable.",
+      },
+    ],
+    2: [
       {
         id: 2,
-        name: "ParqueaTech",
+        name: "Control de calidad en procesos industriales adecuando visión artificial en la modernización del ambiente de formación FMS",
       },
+    ],
+    3: [
       {
         id: 3,
-        name: "SmartLight: Movilidad Eficiente",
+        name: "Tecnificación de una microempresa en uso de tecnologías 4.0 para la vigilancia y control del proceso",
       },
-   
+    ],
+    4: [
       {
         id: 4,
-        name: "Semáforos inteligentes.",
+        name: " Creación de maquina de impresión 3D de 5 ejes diseño SENA",
       },
+    ],
+    5: [
       {
         id: 5,
-        name: "Manizales 360 Postes de seguridad.",
+        name: "Desarrollo de aplicaciones a la medida que faciliten la unificación de herramientas tecnológicas de apoyo a procesos administrativos en diferentes sectores productivos",
       },
-      {
-        id: 6,
-        name: "Paradero inteligente.",
-      },
-      {
-        id: 7,
-        name: "IITIC RENOVANDO VIDAS.",
-      },
-      
-    ],
-
-    2931657: [
-      {
-        id: 1,
-        name: "Llevo- llevo Carretillas de carga municipio de Chinchiná",
-      },
-    ],
-
-    2673191: [
-      {
-        id: 1,
-        name: "Automatización de mezcladora industrial.",
-      },
-      {
-        id: 2,
-        name: "Automatización de gallinero.",
-      },
-      {
-        id: 3,
-        name: "Automatizar selección de productos conformes o no conformes en máquinas de rayos x.",
-      },
-      {
-        id: 4,
-        name: "Desarrollo de prototipo didáctico de generación de energía eólica por túnel de viento.",
-      },
-      {
-        id: 5,
-        name: "Diseño, ensamble y programación de un sistema de taladrado de piezas automático.",
-      },
-      
-      {
-        id: 6,
-        name: "Automatización del sistema de llenado de tanques",
-      },
-    ],
-    2697737: 
-    [
-      {
-        id: 1,
-        name: "Dosificador de alimentos automático para aves y especies menores.",
-      },
-      {
-        id: 2,
-        name: "Unidad integrada de control y maniobra para invernadero.",
-      },
-      {
-        id: 3,
-        name: "Diseño y construcción de procesadora de alimentos cárnicos.",
-      },
-      {
-        id: 4,
-        name: "Diseño e implementación de un sistema de lavado Automático de vehículos con tecnología PLC.",
-      },
-      
     ],
   };
 
@@ -183,20 +134,18 @@ const submitEvaluation = async () => {
       name: "EVALUAR",
       color: "#9b59b6",
       questions: [
-        "¿El proyecto tiene objetivos claros y bien definidos que guían el desarrollo?",
-        "¿La metodología empleada es adecuada y bien explicada para lograr los objetivos del proyecto?",
-        "¿Los resultados del proyecto están bien fundamentados y son consistentes con los objetivos planteados?",
-        "¿El proyecto tiene un propósito significativo y puede generar un impacto positivo en su área de aplicación?",
-        "¿El proyecto incluye soluciones técnicamente viables, utilizando herramientas, conceptos o tecnologías adecuadas a su propósito?",
-        "¿El proyecto demuestra creatividad en su diseño, metodología o solución propuesta? ",
-        "¿El proyecto presenta  impactos positivos en el ámbito social, económico y/o ambiental?",
-        "¿La presentación sigue una estructura lógica y facilita la comprensión?",
+        "El proyecto esta alineado con las líneas tecnológicas y los objetivos propuestos que contribuyan al fortalecimiento de los programas de formación profesional integral y desarrollo tecnológico que se oferta por el Centro de Formación en la vigencia de la convocatoria.",
+        "El proyecto cuenta con una formulación técnica sólida, identificando con claridad los recursos requeridos y el talento humano adecuado con experiencia y habilidades necesarias para ejecutar el proyecto.",
+        "El proyecto sustenta con claridad la inversión de recursos propios requeridos, como otras fuentes de financiamiento, que genere beneficios económicos sostenibles.",
+        "El proyecto considera elementos clave como la equidad, la inclusión, el desarrollo sostenible, y su contribución al fortalecimiento del tejido social; se tendrá en cuenta de manera particular el nivel de interseccionalidad que logre el proyecto para atender las dinámicas sociales y el bienestar de personas o comunidades, como mujeres, jóvenes, comunidades indígenas y campesinos.",
+        "El proyecto evalúa y controla los efectos que produce en el entorno natural, aspectos tales como la calidad del aire, agua y suelo, la biodiversidad, el uso de recursos naturales, y las condiciones ecológicas, considerando su sostenibilidad y capacidad para preservar o mejorar el equilibrio ambiental.",
+        "El proyecto presenta de manera clara la posibilidad de expandirse o crecer en alcance, cobertura o impacto, manteniendo su efectividad y sostenibilidad; o en su defecto, ser reproducido en otros lugares o situaciones similares, ajustándose a las condiciones locales y logrando resultados equivalentes.",
+        "Capacidad del proyecto para ofrecer soluciones o enfoques únicos que lo distingan de otros similares, aportando valor añadido y respondiendo a necesidades de manera creativa y efectiva haciendo uso de nuevas ideas y/o tecnologías.",
 
-        "¿Los expositores demuestran conocimiento del tema y lo explican con claridad?",
-        "¿La presentación visual (diapositivas, prototipos, gráficos) es atractiva y complementa la explicación del proyecto?",
+        "Se refieren a la identificación de posibles desafíos o problemas que podrían afectar el éxito del proyecto. Además, da cuenta de las estrategias o acciones planificadas para reducir, prevenir o manejar esos riesgos, asegurando la continuidad y efectividad del objetivo propuesto.",
+        "El proyecto define indicadores específicos, medibles, alcanzables, relevantes y con un tiempo definido de manera clara y consecuente con los beneficios esperados.",
 
-        "¿Los expositores utilizan recursos (contacto visual, lenguaje corporal, tono) que involucran al público?",
-        "¿Los expositores se expresa con claridad, utilizan un tono adecuado y muestran seguridad al presentar?"
+        "El proyecto permite resolver medidas interpuestas por una autoridad competente que conmina a la entidad al cumplimiento de una acción.",
       ],
     },
   ];
@@ -230,7 +179,7 @@ const submitEvaluation = async () => {
       },
     }));
   };
-/*
+  /*
   const submitEvaluation2 = () => {
     const evaluationData = {
       nombre,
@@ -259,7 +208,10 @@ const submitEvaluation = async () => {
       <div className="grid-box">
         <div className="box-content">
           <span className="ficha">{projectId}</span>
-          <span className="ficha">{'Ficha: '}{boxNumber}</span>
+          <span className="ficha">
+            {"Proyecto N° "}
+            {boxNumber}
+          </span>
         </div>
       </div>
 
@@ -291,24 +243,32 @@ const submitEvaluation = async () => {
         ) : (
           <>
             <h2>Seleccione una única opción por pregunta</h2>
-            <select value={evaluator} onChange={(e) => setEvaluator(e.target.value)}>
-            <option value="">Evaluador</option>
-  <option value="Andrea Cotrini Valencia">Andrea Cotrini Valencia</option>
-  <option value="Andrés Espitia Cardona">Andrés Espitia Cardona</option>
-  <option value="Andrés Felipe Aguirre García">Andrés Felipe Aguirre García</option>
-  <option value="Carlos Alejandro Ramírez Gómez">Carlos Alejandro Ramírez Gómez</option>
-  <option value="Carlos Duber Villa González">Carlos Duber Villa González</option>
-  <option value="Christian Zetty Arenas">Christian Zetty Arenas</option>
-  <option value="Diana Carolina Galvez Coy">Diana Carolina Galvez Coy</option>
-  <option value="Diana Carolina Vargas Giraldo">Diana Carolina Vargas Giraldo</option>
-  <option value="Guillermo Hernán Zapata Castellanos">Guillermo Hernán Zapata Castellanos</option>
-  <option value="Jorge Víctor Buriticá Calderón">Jorge Víctor Buriticá Calderón</option>
-  <option value="José David López Álzate">José David López Álzate</option>
-  <option value="Leidy Johanna Forero Rincón">Leidy Johanna Forero Rincón</option>
-  <option value="Luis Edier Gañan Gañan">Luis Edier Gañan Gañan</option>
-  <option value="Valentina Hernández Piedrahita">Valentina Hernández Piedrahita</option>
-</select>
-
+            <select
+              value={evaluator}
+              onChange={(e) => setEvaluator(e.target.value)}
+            >
+              <option value="">Evaluador</option>
+              <option value="Juan Carlos Ruge">
+                Juan Carlos Ruge
+              </option>
+              <option value="Gerardine Wilches">
+              Gerardine Wilches
+              </option>
+              <option value="Kelly Danith Pacheco">
+              Kelly Danith Pacheco
+              </option>
+              <option value="Gelmer Restrepo">
+              Gelmer Restrepo
+              </option>
+              <option value="Wilson Alejandro Rojas">
+              Wilson Alejandro Rojas
+              </option>
+              <option value="Pablo Andres Erazo Muñoz">
+              Pablo Andres Erazo Muñoz
+              </option>
+             
+              
+            </select>
 
             {currentCategory?.questions.map((question) => (
               <div key={question} className="question-container">
@@ -335,12 +295,9 @@ const submitEvaluation = async () => {
               </div>
             ))}
             <div className="button-group">
-            <button 
-  onClick={submitEvaluation} 
-  disabled={isSubmitting}
->
-  {isSubmitting ? 'Enviando...' : 'Enviar Evaluación'}
-</button>
+              <button onClick={submitEvaluation} disabled={isSubmitting}>
+                {isSubmitting ? "Enviando..." : "Enviar Evaluación"}
+              </button>
               <button onClick={closeModal}>Cerrar</button>
             </div>
           </>
