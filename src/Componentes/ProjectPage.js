@@ -14,7 +14,8 @@ function ProjectPage() {
     nombre = "JORNADA I";
   } else if (boxNumber === "TPM - GPI") {
       nombre = "JORNADA II";
-    }else
+    
+    }  else {
     nombre = "Otra Página";
   }
   const navigate = useNavigate();
@@ -86,7 +87,7 @@ function ProjectPage() {
   const projectsByFicha = {
        
     "JORNADA I": [
-      { id: 1, name: "ESSENTIAL ZENN "},
+          { id: 1, name: "ESSENTIAL ZENN "},
       { id: 2, name: "VITAL GROUND"},
       { id: 3, name: "GRIEKOS "},
       { id: 4, name: "DRINK SPORT"},
@@ -96,6 +97,8 @@ function ProjectPage() {
       { id:8, name: "VOP"},
       { id: 9, name: "MAZAPANA"},
       
+   
+      
     ]
       , "JORNADA II": [
       { id: 1, name: "COFFE CREAM"},
@@ -104,7 +107,6 @@ function ProjectPage() {
       { id: 4, name: "COCAFE"},
       { id: 5, name: "GELATTE"},
       { id: 6, name: "FALAFELES"},
-      
    
       { id: 7, name: "ECOCAFE"},
       { id: 8, name: "VOPECOBLOCKS"},
