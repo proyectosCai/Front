@@ -7,20 +7,19 @@ function BoxPage() {
   const { boxNumber } = useParams();
   let nombre = "";
 
-  if (boxNumber === "1") {
-    nombre = "Desarrollo de prototipos de sistemas embebidos para pequeños y microproductores, integrados con fuentes de generación energética renovable.";
-  } else if (boxNumber === "2") {
-      nombre = "Control de calidad en procesos industriales adecuando visión artificial en la modernización del ambiente de formación FMS";
+
+  if (boxNumber === "TPM - GPI") {
+    nombre = "DIA 1 - JORNADA I";
+  } else if (boxNumber === "TPM - GPI") {
+      nombre = "DIA 1 - JORNADA II";
     }
-    else if (boxNumber === "3") {
-      nombre = "Tecnificación de una microempresa en uso de tecnologías 4.0 para la vigilancia y control del proceso";
+    else if (boxNumber === "TPM - GPI") {
+      nombre = "DIA 2 - JORNADA I";
     } 
-    else if (boxNumber === "4") {
-      nombre = " Creación de maquina de impresión 3D de 5 ejes diseño SENA";
+    else if (boxNumber === "TPM - GPI") {
+      nombre = "DIA 2 - JORNADA II";
     } 
-    else if (boxNumber === "5") {
-      nombre = " Desarrollo de aplicaciones a la medida que faciliten la unificación de herramientas tecnológicas de apoyo a procesos administrativos en diferentes sectores productivos";
-    } 
+    
     
     
     else {
@@ -29,28 +28,41 @@ function BoxPage() {
 
   // Objeto que mapea cada número de ficha a sus proyectos
   const projectsByFicha = {
-    1: [
-      { id: 1, name: "Desarrollo de prototipos de sistemas embebidos para pequeños y microproductores, integrados con fuentes de generación energética renovable." },
+    
+    "DIA 1 - JORNADA I": [
+      { id: 1, name: "ESSENTIAL ZENN "},
+      { id: 2, name: "VITAL GROUND"},
+      { id: 3, name: "GRIEKOS "},
+      { id: 4, name: "DRINK SPORT"},
+      { id: 5, name: "RENATA"},
+      { id: 6, name: "IKIGAI"},
       
+    ] , "DIA 1 - JORNADA II": [
+      { id: 1, name: "ESSENTIAL ZENN "},
+      { id: 2, name: "VITAL GROUND"},
+      { id: 3, name: "GRIEKOS "},
+      { id: 4, name: "DRINK SPORT"},
+      { id: 5, name: "RENATA"},
+      { id: 6, name: "IKIGAI"},
       
-    ],2: [
-      { id: 2, name: "Control de calidad en procesos industriales adecuando visión artificial en la modernización del ambiente de formación FMS" },
-      
+    ]
+      , "DIA 2 - JORNADA I": [
+      { id: 1, name: "COFFE CREAM"},
+      { id: 2, name: "REVIVE"},
+      { id: 3, name: "HEALTHY JUICE"},
+      { id: 4, name: "COCAFE"},
+      { id: 5, name: "GELATTE"},
+      { id: 6, name: "FALAFELES"},
       
     ],
-    3: [
-      { id: 3, name: "Tecnificación de una microempresa en uso de tecnologías 4.0 para la vigilancia y control del proceso" },
-      
-      
-    ],
-    4: [
-      { id: 4, name: " Creación de maquina de impresión 3D de 5 ejes diseño SENA" },
-      
-      
-    ],
-    5: [
-      { id: 5, name: "Desarrollo de aplicaciones a la medida que faciliten la unificación de herramientas tecnológicas de apoyo a procesos administrativos en diferentes sectores productivos" },
-      
+        
+   "DIA 2 - JORNADA II": [
+      { id: 1, name: "ECOCAFE"},
+      { id: 2, name: "VOPECOBLOCKS"},
+      { id: 3, name: "OVOSKIN"},
+      { id: 3, name: "NUTRIFLOUR"},
+
+    
       
     ],
   };
@@ -62,7 +74,7 @@ function BoxPage() {
     <div className="  min-h-screen  ppl-64 md:pl-0">
       <div className="grid-box">
         <div className="box-content">
-          <span className="ficha">{'Proyecto N° '}{boxNumber}</span>
+          <span className="ficha">{boxNumber}</span>
         </div>
       </div>
 
