@@ -94,7 +94,7 @@ function ProjectPage() {
       { id: 6, name: "IKIGAI"},
             { id: 7, name: "BIOCICLO"},
       { id:8, name: "VOP"},
-      { id: 8, name: "MAZAPANA"},
+      { id: 9, name: "MAZAPANA"},
       
     ]
       , "JORNADA II": [
