@@ -4,7 +4,7 @@ import { useState } from 'react';
 import '../Sidebar.css'
 
 const events = [
-  { id: 1, title: "Iniciativas de ideación y fomento a la investigación", path: "/event/" }
+  { id: 1, title: "Evaluación Proyectos I Trimestre - 2026", path: "/event/" }
 
 ];
 
