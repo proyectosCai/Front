@@ -1,5 +1,5 @@
 import React from 'react'
-import ideacion from '../ideacion.png'
+import ideacion from '../proyectoI2026.png'
 import { Link } from 'react-router-dom';
 
 function Event() {
