@@ -4,10 +4,8 @@ import '../Grid.css';
 
 function Grid() {
   const boxes = [
-    { nombre: 'TPM - GPI', Ficha: 'DIA 1 - JORNADA I'},
-    { nombre: 'TPM - GPI', Ficha: 'DIA 1 - JORNADA II'},
-    { nombre: 'TPM - GPI', Ficha: 'DIA 2 - JORNADA I'},
-    { nombre: 'TPM - GPI', Ficha: 'DIA 2 - JORNADA II'},
+    { nombre: 'TPM - GPI', Ficha: 'JORNADA I'},
+    { nombre: 'TPM - GPI', Ficha: 'JORNADA II'},
     
   ]
 
