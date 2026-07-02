@@ -11,10 +11,10 @@ function ProjectPage() {
   let nombre = "";
 
   if (boxNumber === "TPM - GPI") {
-    nombre = " JORNADA I";
+    nombre = "JORNADA I";
   } else if (boxNumber === "TPM - GPI") {
       nombre = "JORNADA II";
-    }
+    }else
     nombre = "Otra Página";
   }
   const navigate = useNavigate();
@@ -92,10 +92,7 @@ function ProjectPage() {
       { id: 4, name: "DRINK SPORT"},
       { id: 5, name: "RENATA"},
       { id: 6, name: "IKIGAI"},
-      
-    
-     
-      { id: 7, name: "BIOCICLO"},
+            { id: 7, name: "BIOCICLO"},
       { id:8, name: "VOP"},
       { id: 8, name: "MAZAPANA"},
       
