@@ -9,16 +9,11 @@ function BoxPage() {
 
 
   if (boxNumber === "TPM - GPI") {
-    nombre = "DIA 1 - JORNADA I";
+    nombre = "JORNADA I";
   } else if (boxNumber === "TPM - GPI") {
-      nombre = "DIA 1 - JORNADA II";
+      nombre = "JORNADA II";
     }
-    else if (boxNumber === "TPM - GPI") {
-      nombre = "DIA 2 - JORNADA I";
-    } 
-    else if (boxNumber === "TPM - GPI") {
-      nombre = "DIA 2 - JORNADA II";
-    } 
+
     
     
     
@@ -27,9 +22,9 @@ function BoxPage() {
   }
 
   // Objeto que mapea cada número de ficha a sus proyectos
-  const projectsByFicha = {
-    
-    "DIA 1 - JORNADA I": [
+ const projectsByFicha = {
+       
+    "JORNADA I": [
       { id: 1, name: "ESSENTIAL ZENN "},
       { id: 2, name: "VITAL GROUND"},
       { id: 3, name: "GRIEKOS "},
@@ -37,16 +32,14 @@ function BoxPage() {
       { id: 5, name: "RENATA"},
       { id: 6, name: "IKIGAI"},
       
-    ] , "DIA 1 - JORNADA II": [
-      { id: 1, name: "ESSENTIAL ZENN "},
-      { id: 2, name: "VITAL GROUND"},
-      { id: 3, name: "GRIEKOS "},
-      { id: 4, name: "DRINK SPORT"},
-      { id: 5, name: "RENATA"},
-      { id: 6, name: "IKIGAI"},
+    
+     
+      { id: 7, name: "BIOCICLO"},
+      { id:8, name: "VOP"},
+      { id: 8, name: "MAZAPANA"},
       
     ]
-      , "DIA 2 - JORNADA I": [
+      , "JORNADA II": [
       { id: 1, name: "COFFE CREAM"},
       { id: 2, name: "REVIVE"},
       { id: 3, name: "HEALTHY JUICE"},
@@ -54,17 +47,16 @@ function BoxPage() {
       { id: 5, name: "GELATTE"},
       { id: 6, name: "FALAFELES"},
       
-    ],
-        
-   "DIA 2 - JORNADA II": [
-      { id: 1, name: "ECOCAFE"},
-      { id: 2, name: "VOPECOBLOCKS"},
-      { id: 3, name: "OVOSKIN"},
-      { id: 3, name: "NUTRIFLOUR"},
+   
+      { id: 7, name: "ECOCAFE"},
+      { id: 8, name: "VOPECOBLOCKS"},
+      { id: 9, name: "OVOSKIN"},
+      { id: 10, name: "NUTRIFLOUR"},
 
     
       
     ],
+  
   };
 
   // Obtiene los proyectos para la ficha actual
