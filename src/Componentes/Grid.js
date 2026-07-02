@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../Grid.css';
-//
+
 function Grid() {
   const boxes = [
     { nombre: 'TPM - GPI', Ficha: 'JORNADA I'},
