@@ -4,11 +4,10 @@ import '../Grid.css';
 
 function Grid() {
   const boxes = [
-    { nombre: 'Desarrollo de prototipos de sistemas embebidos para pequeños y microproductores, integrados con fuentes de generación energética renovable.', Ficha: '1'},
-    { nombre: 'Control de calidad en procesos industriales adecuando visión artificial en la modernización del ambiente de formación FMS', Ficha: '2'},
-    { nombre: 'Tecnificación de una microempresa en uso de tecnologías 4.0 para la vigilancia y control del proceso', Ficha: '3'},
-    { nombre: 'Creación de maquina de impresión 3D de 5 ejes diseño SENA', Ficha: '4'},
-    { nombre: 'Desarrollo de aplicaciones a la medida que faciliten la unificación de herramientas tecnológicas de apoyo a procesos administrativos en diferentes sectores productivos', Ficha: '5'},
+    { nombre: 'TPM - GPI', Ficha: 'DIA 1 - JORNADA I'},
+    { nombre: 'TPM - GPI', Ficha: 'DIA 1 - JORNADA II'},
+    { nombre: 'TPM - GPI', Ficha: 'DIA 2 - JORNADA I'},
+    { nombre: 'TPM - GPI', Ficha: 'DIA 2 - JORNADA II'},
     
   ]
 
