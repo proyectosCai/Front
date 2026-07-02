@@ -36,10 +36,10 @@ function BoxPage() {
      
       { id: 7, name: "BIOCICLO"},
       { id:8, name: "VOP"},
-      { id: 8, name: "MAZAPANA"},
+      { id: 9, name: "MAZAPANA"},
       
-    ]
-      , "JORNADA II": [
+    ],
+   "JORNADA II": [
       { id: 1, name: "COFFE CREAM"},
       { id: 2, name: "REVIVE"},
       { id: 3, name: "HEALTHY JUICE"},
