@@ -2,7 +2,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import "../BoxPage.css";
-
+//
 function BoxPage() {
   const { boxNumber } = useParams();
   let nombre = "";
